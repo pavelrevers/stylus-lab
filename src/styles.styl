@@ -1,0 +1,23 @@
+@require './vars.styl'
+@import './mixins.styl'
+
+.styles-file {
+  display: block;
+}
+
+.common-rules {
+  height()
+  display: block;
+  text-align: center;
+}
+
+.height {
+  height()
+}
+
+for $size in 1..4 {
+  .size-{$size} {
+    width: $width-step * $size
+    @extend .common-rules
+  }
+}
